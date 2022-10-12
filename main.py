@@ -1,7 +1,6 @@
 import subprocess
 import sys
 from hashlib import md5, sha256
-#from png import png_coll
 
 
 def main():

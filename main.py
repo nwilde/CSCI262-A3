@@ -17,7 +17,7 @@ def main():
     print("%s original file MD5 hash: %s" % (fn1, d1_hash))
     print("%s original filesize: %s kB" % (fn1, round(len(d1) / 1024)))
     print("%s original file MD5 hash: %s" % (fn2, d2_hash))
-    print("%s original filesize: %s kB" % (fn1, round(len(d2) / 1024)))
+    print("%s original filesize: %s kB" % (fn2, round(len(d2) / 1024)))
 
     print("Colliding Files...")
     subprocess.run(["python", "png.py", fn1, fn2])
@@ -32,7 +32,7 @@ def main():
     print("%s collided file MD5 hash: %s" % (fn1, coll_d1_hash))
     print("%s collided filesize: %s kB" % (fn1, round(len(coll_d1) / 1024)))
     print("%s collided file MD5 hash: %s" % (fn2, coll_d2_hash))
-    print("%s collided filesize: %s kB" % (fn1, round(len(coll_d2) / 1024)))
+    print("%s collided filesize: %s kB" % (fn2, round(len(coll_d2) / 1024)))
 
     print("Same files that cause MD5 collision hashed with SHA-256:")
     coll_d1_sha_hash = sha256(coll_d1).hexdigest()
